@@ -1,0 +1,101 @@
+FORMAT: 1A
+HOST: https://candidates-information.herokuapp.com/
+
+# Candidates Info.
+It's a simple API allowing consumers to view information of candidates.
+
+##Candidates Information [/pets/]
+
+### List All Candidates[GET]
+
++ Response 200 (application/json)
+        
+        [
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 2048
+                    }, {
+                        "choice": "Python",
+                        "votes": 1024
+                    }
+                ]
+            }
+        ]
+
+
+### Add a new Candidates Information [POST]
+
++ Response 200 (application/json)
+
+        {
+            "": "Candidates:",
+        [
+        {
+            "_id": "5cbd8ab3e4041310c8861577",
+            "name": "Liam",
+            "regestration": "171115865",
+            "college": "siamese",
+            "session": "2016-17"
+        },
+        {
+            "_id": "5cbd8bade4041333e8dc5cca",
+            "name": "Liami",
+            "regestration": "1711195865",
+            "college": "siamiese",
+            "session": "2016-917"
+        },
+        {
+            "_id": "5cbd8c81e4041330e8898c25",
+            "name": "nahid",
+            "regestration": "1711076136",
+            "college": "midc",
+            "session": "2016-17"
+        },
+        {
+            "_id": "5cbd8c9ae4041330e8898c26",
+            "name": "nadim",
+            "regestration": "1711076111",
+            "college": "rajshahi college",
+            "session": "2016-17"
+        },
+        {
+            "_id": "5cbd8cb1e4041330e8898c27",
+            "name": "shuvo",
+            "regestration": "1710776125",
+            "college": "Purbadala college",
+            "session": "2016-17"
+        }
+        ]
+        }
+        
+##Modify Candidates Information  [/questions/{id}]
+
++ Parameters
+    + id (number) - ID of the User in the form of an integer
+
+### Delete candidates data [DELETE/{id}]
+
++ Response 204
+
+### Update candidates data [PUT/{id}]
+                Thanks for using our app.
++ Parameters
+    + id (number) - ID of the User in the form of an integer
+
++ Request (application/json)
+
+        {
+            {
+                "_id": "5cbd8cb1e4041330e8898c27",
+                "name": "shuruj",
+                "regestration": "1810776125",
+                "college": "Rajshai college",
+                "session": "2017-18"
+            }
+        }
+
++ Response 201 (application/json)
